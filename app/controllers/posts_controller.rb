@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   end
   
   def show
+    @comments = Comment.where(post_id: @post)
   end
   
   def new
@@ -14,7 +15,8 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(post_params)
-    @post.user = current_user
+    @post.user = current_user    
+
     if @post.save
       redirect_to @post
     else
