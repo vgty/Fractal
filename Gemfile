@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
 gem 'paperclip', '~> 5.1'
 gem 'pry-byebug'
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
